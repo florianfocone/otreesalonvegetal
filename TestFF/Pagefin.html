@@ -1,0 +1,21 @@
+{{ block title }}Je vous remercie pour votre participation{{ endblock }}
+{{ block content }}
+<br><br>
+<p> label :  {{participant.label}} </p>
+<p> ID dans le groupe :  {{player.id_in_group}} </p>
+<p> Vous remportez : {{player.payoff}} </p>
+
+<style>
+h4 {
+font-size: 1.2em;
+margin-bottom:50px;
+}
+
+p{
+font-size: 1em;
+color:black;
+margin-bottom:50px;
+}
+
+</style>
+{{ endblock }}

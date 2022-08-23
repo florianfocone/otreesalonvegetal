@@ -1,0 +1,41 @@
+{{ block content }}
+<h4> Sur une échelle de 0 à 10 (0 signifiant aucune et 10 totale), quelle confiance accordez-vous à vos fournisseurs ?   </h4>
+{{ formfield 'choix_multiples_confiance_fournisseur'}}
+{{ next_button }}
+
+
+
+
+
+
+<!-- /////////////// javascript //////////////////////////////////////////////////-->
+<script>
+
+
+</script>
+
+<!-- /////////////// style //////////////////////////////////////////////////-->
+<style>
+h4 {
+font-size: 1.5em;
+}
+
+p{
+font-weight: normal;
+font-size: 1.2em;
+}
+
+label.col-form-label{
+font-size: 1em;
+color:red;
+margin-bottom:50px;
+}
+
+.controls {
+font-size: 1em;
+margin-bottom:50px;
+}
+</style>
+
+
+{{ endblock }}

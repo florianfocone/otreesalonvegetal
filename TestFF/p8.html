@@ -1,0 +1,41 @@
+{{ block content }}
+<h4> Quel est le nom de l'entreprise dans laquelle vous travaillez ?   </h4>
+{{ formfield 'freetext_optionnel_nom_entreprise'}}
+{{ next_button }}
+
+
+
+
+
+
+<!-- /////////////// javascript //////////////////////////////////////////////////-->
+<script>
+
+
+</script>
+
+<!-- /////////////// style //////////////////////////////////////////////////-->
+<style>
+h4 {
+font-size: 1.2em;
+}
+
+p{
+font-weight: normal;
+font-size: 1.5em;
+}
+
+label.col-form-label{
+font-size: 1em;
+color:red;
+margin-bottom:50px;
+}
+
+.controls {
+font-size: 1em;
+margin-bottom:50px;
+}
+</style>
+
+
+{{ endblock }}

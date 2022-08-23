@@ -1,0 +1,62 @@
+{{ block content }}
+
+
+<h4> Pouvez-vous préciser le secteur de votre entreprise ? </h4>
+
+<div class="s" id="1"> {{formfield 'choix_multiples_secteur1'}} </div>
+<div class="s" id="2"> {{formfield 'choix_multiples_secteur2'}} </div>
+<div class="s" id="3"> {{formfield 'choix_multiples_secteur3'}} </div>
+<div class="s" id="4"> {{formfield 'choix_multiples_secteur4'}} </div>
+
+
+{{ next_button }}
+
+
+
+
+
+
+<!-- /////////////// javascript //////////////////////////////////////////////////-->
+<script>
+if ({{ player.choix_multiples_secteur}} == 1) {
+document.getElementById('1').style.display = 'inline';
+}
+if ({{ player.choix_multiples_secteur}} == 2) {
+document.getElementById('2').style.display = 'inline';
+}
+if ({{ player.choix_multiples_secteur}} == 3) {
+document.getElementById('3').style.display = 'inline';
+}
+if ({{ player.choix_multiples_secteur}} == 4) {
+document.getElementById('4').style.display = 'inline';
+}
+
+</script>
+
+<!-- /////////////// style //////////////////////////////////////////////////-->
+<style>
+
+h4 {
+font-size: 1.2em;
+}
+
+label.col-form-label{
+font-size: 1em;
+color:red;
+margin-bottom:50px;
+}
+
+.s {
+display: none;
+font-size: 1em;
+}
+
+.controls {
+margin-bottom:50px;
+}
+
+}
+</style>
+
+
+{{ endblock }}

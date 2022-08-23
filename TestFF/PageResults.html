@@ -1,0 +1,36 @@
+{{ block content }}
+
+<br><br>
+<p> Si vous souhaitez ajouter des commentaires, n'hésitez pas à utiliser l'emplacement ci-dessous :</p>
+{{ formfield 'freetext_commentaire_fin'}}
+
+<p> Si vous souhaitez recevoir vos résultats, merci d'indiquer votre adresse e-mail :</p>
+{{ formfield 'freetext_mail'}}
+
+{{ next_button }}
+
+<style>
+h4 {
+font-size: 1.2em;
+margin-bottom:50px;
+}
+
+p{
+font-size: 1em;
+color:black;
+margin-bottom:50px;
+}
+
+label.col-form-label{
+font-size: 1em;
+color:red;
+margin-bottom:50px;
+}
+
+.multchoice{
+font-size: 1.4em;
+margin-bottom:50px;
+}
+
+</style>
+{{ endblock }}
