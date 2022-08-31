@@ -22,6 +22,11 @@ class Player(BasePlayer): #player model
 #ici que des statiques mais ça peut-être des dynamics : assign des réponses random, en fct des réponses d'avant, etc, affiche qqc si tu réponds à coté de la plaque, etc.
 # possibilité de faire des optionnels (pas obligé de répondre
 
+    contrib1=models.CurrencyField();
+    contrib2=models.CurrencyField();
+    contrib3=models.CurrencyField();
+    contrib4=models.CurrencyField();
+
     choix_multiples_genre = models.StringField(
     choices=[['femme', 'Une femme'], ['homme', 'Un homme']],
     label='Une seule réponse possible.',
@@ -327,7 +332,7 @@ class Player(BasePlayer): #player model
     )
 
     potcommun = models.IntegerField(
-    choices=[['90', '90€ (30€ - 30€ - 30€)'], ['75', '75€ (30€ - 30€ - 15€)'],['60', '60€ (30€ - 15€ - 15€ ou 30€ - 30€ - 0€)'], ['45', '45€ (15€ - 15€ - 15€ ou 30€ - 15€ - 0€)'], ['30', '30€ (15€ - 15€ - 0€ ou 30€ - 0€ -0€)'],['0', '0€ (0€ - 0€ - 0€)']],
+    choices=[['0', '0€ (0€ - 0€ - 0€)'], ['15', '15€ (15€ - 0€ - 0€)'],['30', '30€ (15€ - 15€ - 0€ ou 30€ - 0€ -0€)'],['45', '45€ (15€ - 15€ - 15€ ou 30€ - 15€ - 0€)'],['60', '60€ (30€ - 15€ - 15€ ou 30€ - 30€ - 0€)'], ['75', '75€ (30€ - 30€ - 15€)'],['90', '90€ (30€ - 30€ - 30€)']],
     label='Une seule réponse possible.',
     widget=widgets.RadioSelect,
     blank=False,
@@ -354,6 +359,13 @@ def set_payoffs(group):
     group.individual_share = group.total_contribution * Constants.multiplier / Constants.players_per_group
     for player in players:
         player.payoff = group.individual_share + 30 - player.choix_pot_commun
+        player.contrib1 = players[0].choix_pot_commun
+        player.contrib2= players[1].choix_pot_commun
+        player.contrib3 = players[2].choix_pot_commun
+        player.contrib4 = players[3].choix_pot_commun
+
+
+
 
 
 # PAGES
@@ -500,8 +512,10 @@ class PageResults(Page):
 class Pagefin(Page):
     form_model = 'player'
 
+
+
 class attente(Page):
     form_model = 'player'
 
-#page_sequence = [p11,waitPage]
+#page_sequence = [p31strategie,ResultsWaitPage,p32,PageResults,Pagefin]
 page_sequence = [p1,p2,p3,p4,p5,p6,p7avant,p7,p8,p9,p10,p11,p13,waitPage,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,waitPage,p31strategie,ResultsWaitPage,p32,PageResults,Pagefin]
