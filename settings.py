@@ -40,8 +40,8 @@ USE_POINTS = True
 
 ROOMS = [
     dict(
-        name='vegetal',
-        display_name='vegetal',
+        name='Salon Vegetal',
+        display_name='Salon Vegetal',
         participant_label_file='_rooms/label_p.txt',
         use_secure_urls=False  #obligé de passer par les urls spécifique si true sinon false et entre le label http://localhost:8001/room/room_salon_vegetal
     ),
