@@ -15,7 +15,7 @@ INSTALLED_APPS = ['otree']
 
 SESSION_CONFIGS = [
         dict(
-         name='Salon Vegetal',
+         name='Salon_Vegetal',
          app_sequence=['TestFF'],
          num_demo_participants=40 #participant en tout
             )
@@ -40,8 +40,8 @@ USE_POINTS = True
 
 ROOMS = [
     dict(
-        name='Salon Vegetal',
-        display_name='Salon Vegetal',
+        name='Salon_Vegetal',
+        display_name='Salon_Vegetal',
         participant_label_file='_rooms/label_p.txt',
         use_secure_urls=False  #obligé de passer par les urls spécifique si true sinon false et entre le label http://localhost:8001/room/room_salon_vegetal
     ),
