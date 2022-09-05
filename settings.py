@@ -15,7 +15,7 @@ INSTALLED_APPS = ['otree']
 
 SESSION_CONFIGS = [
         dict(
-         name='vegetal',
+         name='Salon Vegetal',
          app_sequence=['TestFF'],
          num_demo_participants=40 #participant en tout
             )
