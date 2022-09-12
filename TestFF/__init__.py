@@ -324,7 +324,7 @@ class Player(BasePlayer): #player model
     )
 
     choix_pot_commun = models.IntegerField(
-    choices=[['0', '0'], ['15', '15'], ['30', '30']],
+    choices=[['0', '0'], ['5', '5'], ['10', '10']],
     label='Une seule réponse possible.',
     widget=widgets.RadioSelect,
     blank=False,
@@ -332,7 +332,7 @@ class Player(BasePlayer): #player model
     )
 
     potcommun = models.IntegerField(
-    choices=[['0', '0€ (0€ - 0€ - 0€)'], ['15', '15€ (15€ - 0€ - 0€)'],['30', '30€ (15€ - 15€ - 0€ ou 30€ - 0€ -0€)'],['45', '45€ (15€ - 15€ - 15€ ou 30€ - 15€ - 0€)'],['60', '60€ (30€ - 15€ - 15€ ou 30€ - 30€ - 0€)'], ['75', '75€ (30€ - 30€ - 15€)'],['90', '90€ (30€ - 30€ - 30€)']],
+    choices=[['0', '0€ (0€ - 0€ - 0€)'], ['5', '5€ (5€ - 0€ - 0€)'],['10', '10€ (5€ - 5€ - 0€ ou 10€ - 0€ -0€)'],['15', '15€ (5€ - 5€ - 5€ ou 10€ - 5€ - 0€)'],['20', '20€ (10€ - 5€ - 5€ ou 10€ - 10€ - 0€)'], ['25', '25€ (10€ - 10€ - 5€)'],['30', '30€ (10€ - 10€ - 10€)']],
     label='Une seule réponse possible.',
     widget=widgets.RadioSelect,
     blank=False,
