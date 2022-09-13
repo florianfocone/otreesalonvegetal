@@ -358,11 +358,12 @@ def set_payoffs(group):
     group.total_contribution = sum(contributions)
     group.individual_share = group.total_contribution * Constants.multiplier / Constants.players_per_group
     for player in players:
-        player.payoff = group.individual_share + 10 - player.choix_pot_commun
+        player.payoff = group.individual_share + 30 - player.choix_pot_commun
         player.contrib1 = players[0].choix_pot_commun
         player.contrib2= players[1].choix_pot_commun
         player.contrib3 = players[2].choix_pot_commun
         player.contrib4 = players[3].choix_pot_commun
+
 
 
 

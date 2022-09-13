@@ -3,7 +3,7 @@
 <br><br>
 <p> label :  {{participant.label}} </p>
 <!--<p> ID dans le groupe :  {{player.id_in_group}} </p>-->
-<p> Vous avez contribué à hauteur de : {{player.choix_pot_commun}} €</p>
+<p> Vous avez contribué à hauteur de : {{player.choix_pot_commun}}</p>
 <p> Voici les contributions des 4 participants de votre groupe : {{player.contrib1}} ; {{player.contrib2}} ; {{player.contrib3}} ; {{player.contrib4}}  </p>
 <p> Vous remportez : {{player.payoff}} </p>
 <style>
