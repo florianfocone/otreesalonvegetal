@@ -367,7 +367,7 @@ def set_payoffs(group):
 def creating_session(subsession):
     labels = ['1', '2', '3','4', '5', '6','7', '8', '9','10','11', '12', '13','14', '15', '16','17', '18', '19','20','21', '22', '23','24', '25', '26','27', '28', '29','30','31', '32', '33','34', '35', '36','37', '38', '39','40']
     for player, label in zip(subsession.get_players(), labels):
-        p.participant.label = label
+        player.participant.label = label
 
 
 # PAGES
@@ -519,5 +519,5 @@ class Pagefin(Page):
 class attente(Page):
     form_model = 'player'
 
-#page_sequence = [p31strategie,ResultsWaitPage,p32,PageResults,Pagefin]
+
 page_sequence = [p1,p2,p3,p4,p5,p6,p7avant,p7,p8,p9,p10,p11,p13,waitPage,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,waitPage,p31strategie,ResultsWaitPage,p32,PageResults,Pagefin]

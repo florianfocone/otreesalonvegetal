@@ -48,12 +48,3 @@ ROOMS = [
   #  dict(name='live_demo', display_name='Room for live demo (no participant labels)'),
 ]
 
-
-
-
-# info
-# routeur wifi : 192.168.1.1  -- mdp : lb49!
-# wifi : experience -- mdp : 12345678
-#  otree prodserver 192.168.1.10:80
-# admin interface login : p2ac -- mdp : p2ac
-# créer room --> 192.168.1.10/room/vegetal
